@@ -1,0 +1,44 @@
+[
+    {
+        "projectName":"Soul Collector",
+        "projectIcon":"/Images/Projects/SoulCollector_Icon.png",
+        "projectRole":"Game Designer | Programmer",
+        "description":"Collect as much souls as possible while being overwhelmed by enemies",
+        "downloadUrl":""
+    },
+    {
+        "projectName":"Riot Shield",
+        "projectIcon":"/Images/Projects/RiotShield_Icon.png",
+        "projectRole":"GUI Designer | Programmer",
+        "description":"An endless runner where your goal is to destroy vehicles and obstacles",
+        "downloadUrl":"https://play.google.com/store/apps/details?id=com.StudioKaboom.riotShield"
+    },
+    {
+        "projectName":"Experimental Games",
+        "projectIcon":"/Images/Projects/ExperimentalGames_Icon.png",
+        "projectRole":"Game Designer | Programmer",
+        "description":"Experimenting with 4 different themes; Seasons, Space, Racing, and Embodied Interaction or Tangile Media.",
+        "downloadUrl":"https://experimentalgamedesign.itch.io/kenny-tran-experimental-games"
+    },
+    {
+        "projectName":"Virtual Reality",
+        "projectIcon":"/Images/Projects/VirtualReality_Icon.jpg",
+        "projectRole":"Game Designer | Programmer",
+        "description":"Recreated an old military base in Brisbane into a fantasy setting for VR",
+        "downloadUrl":"https://virtualenvironments.itch.io/kenny-tran-vr-expereince"
+    },
+    {
+        "projectName":"Skull Temple",
+        "projectIcon":"/Images/Projects/SkullTemple_Icon.png",
+        "projectRole":"Game Designer | Programmer",
+        "description":"An endless runner where you dodge obstacles and destroy enemies",
+        "downloadUrl":"https://turbo-interactive.itch.io/skull-temple"
+    },
+    {
+        "projectName":"Spooky Factory",
+        "projectIcon":"/Images/Projects/SpookyFactory_Icon.jpg",
+        "projectRole":"Programmer",
+        "description":"Locked inside a factory your goal is to find buttons that will unlock the door to escape",
+        "downloadUrl":"https://studiokaboom.itch.io/spooky-factory"
+    }
+]
