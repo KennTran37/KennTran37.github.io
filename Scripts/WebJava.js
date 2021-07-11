@@ -1,34 +1,34 @@
-//window.onload = function(){
-//    for(var i = 0; i < mediaIcons.length; i++)
-//        AssignIconEvent(mediaIcons[i]);
-//    
-//    LoadProjectListJSON().then(async ()=>{
-//       for(var i = 0; i < projectList.length; i++){
-//           var _card = document.createElement("div");
-//           _card.setAttribute("class", "ProjectCard");
-//           
-//           AddCardEvent(_card, projectList[i].downloadUrl);
-//           
-//           //Create project icon
-//           var _icon = document.createElement("IMG");
-//           _icon.src = projectList[i].projectIcon;
-//           
-//           //Create project name label
-//           var _name = document.createElement("h3");
-//           _name.innerText = projectList[i].projectName;           
-//           
-//           //Create role label
-//           var _role = document.createElement("p");
-//           let _roleNames =  projectList[i].projectRole.replaceAll('|', "<span>&#8226;</span>");
-//           _role.innerHTML = _roleNames;
-//           
-//           _card.append(_icon);
-//           _card.append(_name);
-//           _card.append(_role);
-//           projectsSegment.append(_card);
-//       } 
-//    });
-//}
+window.onload = function(){
+    for(var i = 0; i < mediaIcons.length; i++)
+        AssignIconEvent(mediaIcons[i]);
+    
+    LoadProjectListJSON().then(async ()=>{
+       for(var i = 0; i < projectList.length; i++){
+           var _card = document.createElement("div");
+           _card.setAttribute("class", "ProjectCard");
+           
+           AddCardEvent(_card, projectList[i].downloadUrl);
+           
+           //Create project icon
+           var _icon = document.createElement("IMG");
+           _icon.src = projectList[i].projectIcon;
+           
+           //Create project name label
+           var _name = document.createElement("h3");
+           _name.innerText = projectList[i].projectName;           
+           
+           //Create role label
+           var _role = document.createElement("p");
+           let _roleNames =  projectList[i].projectRole.replaceAll('|', "<span>&#8226;</span>");
+           _role.innerHTML = _roleNames;
+           
+           _card.append(_icon);
+           _card.append(_name);
+           _card.append(_role);
+           projectsSegment.append(_card);
+       } 
+    });
+}
     
 function AddCardEvent(_card ,_url){
     if(_url == "") return;
@@ -75,6 +75,11 @@ var mediaIcons = [
         document.getElementById("linkedinIcon"),
         "Images/SocialIcons/Logo_LinkedIn.png",
         "Images/SocialIcons/Logo_LinkedIn_Highlight.png",
+    ],
+    [
+        document.getElementById("itchIcon"),
+        "Images/SocialIcons/Logo_Itch.png",
+        "Images/SocialIcons/Logo_Itch_Highlight.png",
     ],
     [
         document.getElementById("twitterIcon"),
