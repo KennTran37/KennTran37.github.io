@@ -1,106 +1,77 @@
 <!DOCTYPE html>
 <html lang="eu"> <meta charset="utf-8">
-<script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
 <title>Kenny Tran - Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="WebStyle.css">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
-<body>
-    <header class="PageHeader">
-        <div>
-            <h1 id="myName">Kenny Tran</h1>
-            <h1 id="websitePurpose">Resume | Portfolio</h1>
+    <link rel="stylesheet" href="WebStyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&display=swap" rel="stylesheet">
+    <body>
+        <div id="landingPage">
+            <div id="landing">
+                <img id="titleImage" src="Images/Title.png">
+<!--
+                <div id="jobWrap">
+                    <span id="jobLabel"><p>Game Designer</p></span>
+                    <span id="jobLabel"><p>Game Programmer</p></span>
+                </div>
+-->
+                <div id="socialBox" class="box">
+                    <a href="https://github.com/KennTran37" target="_blank"><img id="githubIcon" src="Images/SocialIcons/Logo_Github.png" alt="Github Account"></a>
+                    <a href="https://www.linkedin.com/in/kenntran37/" target="_blank"><img id="linkedinIcon" src="Images/SocialIcons/Logo_LinkedIn.png" alt="Linked In Account"></a>
+                    <a href="https://kenn-tran-37.itch.io/" target="_blank"><img src="Images/SocialIcons/Logo_Itch.png" alt="Itch.io Account"></a>
+                    <a href="https://twitter.com/Kenn_Tran_37" target="_blank"><img id="twitterIcon" src="Images/SocialIcons/Logo_Twitter.png" alt="Twitter Account"></a>
+                    <a href="https://www.youtube.com/channel/UCDrWh7YwN5wZklw5cZ4TZ5w/" target="_blank"><img id="youtubeIcon" src="Images/SocialIcons/Logo_Youtube.png" alt="Youtube Account"></a>
+                </div>
+            </div>
+            <img id="carrotArrow" src="Images/Carrot_Arrow.png">
         </div>
-    </header>
-    <div class="Content">
-        <div id="introduction" class="Segment">
-            <img id="portrait" src="Images/Self_Portrait.jpg" alt="Self Portrait">
-            <p>Hello, my name is Kenny Tran and welcome to my website! <br> My goals are to use my knowledge, expereince and skills on whatever project I can work on and gain the chance to improve those skills, gain more knowledge and experiences from them.</p>
+        <div id="portfolio">
+            <div id="introduction" class="box">
+                <p>Hello, my name is Kenny Tran and welcome to my website! My goals are to use my knowledge, expereince and skills on whatever project I can work on and gain the chance to improve those skills, gain more knowledge and experiences from them.</p>
+            </div>
+            <div id="split">
+                <div id="splitOne">
+                    <div class="box">
+                        <h3>Personal Skills</h3>
+                        <p>Fast Learner <span>&#8226;</span> Time Management <span>&#8226;</span> Reliable <span>&#8226;</span> Organised</p>
+                    </div>
+                    <div class="box">
+                        <h3>Professional Skills</h3>
+                        <p>Animation <span>&#8226;</span> 2D/3D Design <span>&#8226;</span> Game Design <span>&#8226;</span> Problem Solving <span>&#8226;</span> Agile Management</p>
+                    </div>
+                    <div class="box">
+                        <h3>Languages</h3>
+                        <p>C# <span>&#8226;</span> HTML <span>&#8226;</span> JavaScript</p>
+                    </div>
+                </div>
+                <div id="splitTwo">
+                    <div id="education" class="box">
+                        <h3>Education</h3>
+                        <ul>
+                            <li>Secondary School <span>&#8226;</span></li>
+                                <dt>Corinda SHS | 2012 - 2016</dt>
+                            <li>Diploma of Digital and Interactive Games <span>&#8226;</span></li>
+                                <dt>Tafe Brisbane | 2017 - 2018</dt>
+                            <li>Bachelor of Games and Interactive Design <span>&#8226;</span></li>
+                                <dt>University of Canberra | 2018 - 2020</dt>
+                        </ul>
+                    </div>
+                    <div id="work" class="box">
+                        <h3>Work</h3>
+                        <ul>
+                            <li>Woolworth - School Work Experience <span>&#8226;</span></li>
+                                <dt>Mt Ommaney | 2014</dt>
+                            <li>Ice-cream Mania - Sales Assistant <span>&#8226;</span></li>
+                                <dt>South Bank | 2016 June - November</dt>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="projects"></div>
         </div>
-        <div id="introductionTwo" class="Segment">
-            <p>
-                Game Designer | Game Programmer <br>
-                @Kenn_Tran_37 | kenn_tran_37@hotmail.com | +61 433 535 961
-            </p>
-            <div id="socialMedia">
-                <a href="mailto: kenn_tran_37@hotmail.com" target="_blank"><img id="emailIcon" class="mediaIcon" src="Images/SocialIcons/Logo_Email.png" alt="Email"></a>
-                <a href="https://twitter.com/Kenn_Tran_37" target="_blank"><img id="twitterIcon" class="mediaIcon" src="Images/SocialIcons/Logo_Twitter.png" alt="Twitter Account"></a>
-                <a href="https://www.youtube.com/channel/UCDrWh7YwN5wZklw5cZ4TZ5w/videos" target="_blank"><img id="youtubeIcon" class="mediaIcon" src="Images/SocialIcons/Logo_Youtube.png" alt="Youtube Channel"></a>
-                <a href="https://www.linkedin.com/in/kenntran37/" target="_blank"><img id="linkedInIcon" class="mediaIcon" src="Images/SocialIcons/Logo_LinkedIn.png" alt="LinkedIn Channel"></a>
-            </div>
-        </div>
-        <div id="resume" class="Segment">
-            <div id="skills" class="SubSegment">
-                <h3>Personal Skills</h3>
-                <ul>
-                    <li>Fast Learner</li>
-                    <li>Time Management</li>
-                    <li>Reliable</li>
-                    <li>Organised</li>
-                </ul><br>
-                <h3 id="proSkillsTitle">Professional Skills</h3>
-                <ul id="proSkillsList">
-                    <li>Programming Languages</li>
-                    <dt>C# | HTML | JavaScript</dt>
-                    <li>Animation</li>
-                    <li>2D/3D Design</li>
-                    <li>Game Design</li>
-                    <li>Problem Solving</li>
-                    <li>Agile Management</li>
-                </ul>
-            </div>
-            <div id="proSkills" class="SubSegment">
-                <ul>
-                    <li>Programming Languages</li>
-                    <dt>C# | HTML | JavaScript</dt>
-                    <li>Animation</li>
-                    <li>2D/3D Design</li>
-                    <li>Game Design</li>
-                    <li>Problem Solving</li>
-                    <li>Agile Management</li>
-                </ul>
-            </div>
-            <div id="education" class="SubSegment">
-                <h3>Education</h3>
-                <ul>
-                    <li>Secondary School</li>
-                    <dt>Corinda SHS | 2012 - 2016</dt>
-                    <li>Diploma of Digital and Interactive Games</li>
-                    <dt>Tafe Brisbane | July 2017 - 2018</dt>
-                    <li>Bachelor of Games and Interactive Design</li>
-                    <dt>University of Canberra | June 2018 - May 2020</dt>
-                </ul><br>
-                <h3>Work</h3>
-                <ul>
-                    <li>Woolworth - School Work Experience</li>
-                    <dt>Mt Ommaney | 2014</dt>
-                    <li>Ice-cream Mania - Sales Assistant</li>
-                    <dt>South Bank | 2016 June - November</dt>
-                </ul>
-            </div>
-            <div id="interest" class="SubSegment">
-                <h3>Interests</h3>
-                <ul>
-                    <li>Game Development</li>
-                    <li>AR/VR Development</li>
-                    <li>2D/3D Animation</li>
-                    <li>Learning new and ineresting things</li>
-                </ul>
-            </div>
-            <div id="hobbies" class="SubSegment">
-                <h3>Hobbies</h3>
-                <ul>
-                    <li>Making and playing games</li>
-                    <li>Reading (Light )Novels and Manga</li>
-                    <li>Watching Youtube and Anime</li>
-                </ul>
-            </div>
-        </div>
-        <div id="projects" class="Segment">
-        </div>
-        <div id="media" class="Segment"></div>
-    </div>
-    <script src="Scripts/WebJava.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-</body>
+    </body>
+    <footer>
+        <script src="Scripts/WebJava.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </footer>
 </html>
