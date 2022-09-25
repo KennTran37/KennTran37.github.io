@@ -1,94 +1,73 @@
 window.onload = function(){
-    for(var i = 0; i < mediaIcons.length; i++)
-        AssignIconEvent(mediaIcons[i]);
+    var x = window.matchMedia("screen and (min-height: 1000px)");
+    if(x.matches){
+        window.addEventListener('scroll', Scroll_EventListener);
+    }
+
+    fetch("./Scripts/ProjectList.json").then(resp => {
+        return resp.json()
+    }).then(json => {
+        const _featureProjectsHolder = document.getElementById("projFeatures");
+        _featureProjectsHolder.append(CreateProjectCard(json[1]));
+        _featureProjectsHolder.append(CreateProjectCard(json[4]));
+        _featureProjectsHolder.append(CreateProjectCard(json[2]));
+        
+        const _projectsHolder = document.getElementById("projects");
+        
+        for(var i = 0; i < json.length; i++){
+            _projectsHolder.append(CreateProjectCard(json[i]));
+        }
+    });
+}
+
+function Scroll_EventListener(e){
+    if(window.pageYOffset > 150){
+        document.getElementById("landingPage").classList.add("heightAnimation");
+        window.removeEventListener('scroll', Scroll_EventListener);
+    }
+}
+
+function CreateProjectCard(project){
+    var _card = document.createElement('div');
+    _card.setAttribute('class', 'projectCard');
     
-    LoadProjectListJSON().then(async ()=>{
-       for(var i = 0; i < projectList.length; i++){
-           var _card = document.createElement("div");
-           _card.setAttribute("class", "ProjectCard");
-           
-           AddCardEvent(_card, projectList[i].downloadUrl);
-           
-           //Create project icon
-           var _icon = document.createElement("IMG");
-           _icon.src = projectList[i].projectIcon;
-           
-           //Create project name label
-           var _name = document.createElement("h3");
-           _name.innerText = projectList[i].projectName;           
-           
-           //Create role label
-           var _role = document.createElement("p");
-           let _roleNames =  projectList[i].projectRole.replaceAll('|', "<span>&#8226;</span>");
-           _role.innerHTML = _roleNames;
-           
-           _card.append(_icon);
-           _card.append(_name);
-           _card.append(_role);
-           projectsSegment.append(_card);
-       } 
-    });
-}
+    var _icon = document.createElement('IMG');
+    _icon.setAttribute('class', 'Icon');
+    _icon.src = project.projectIcon;
+    _card.appendChild(_icon);
+
+    var _projInfo = document.createElement('div');
+    _projInfo.setAttribute('class', 'projectCard-Info');
+    _card.appendChild(_projInfo);
+
+    var _projName = document.createElement('h3');
+    _projName.setAttribute('class', 'projectCard-Name');
+    _projName.innerText = project.projectName;
+    _projInfo.appendChild(_projName);
     
-function AddCardEvent(_card ,_url){
-    if(_url == "") return;
-    _card.addEventListener("mouseover", function(){
-        this.style.cursor = 'pointer';
-    });
-    _card.addEventListener("click", function(){
-        window.open(_url, '_blank');
-    });
-}
+    var _gap = document.createElement('hr');
+    _gap.setAttribute('size', '2px');
+    _gap.setAttribute('width', '70%');
+    _gap.setAttribute('color', 'white');
+    _projInfo.appendChild(_gap);
+    
+    var _projLinks = document.createElement('div');
+    _projLinks.setAttribute('class', 'projectCard-Links');
+    _projInfo.appendChild(_projLinks);
 
-var mediaSegment = document.getElementById("media");
-var projectsSegment = document.getElementById("projects");
-var projectList;
-async function LoadProjectListJSON(){
-    await fetch("/Scripts/ProjectList.json")
-        .then(response =>{
-            if(!response.ok){
-                throw new Error('Network response failed!');
-            }
-            return response.json();
-        })
-        .then(data =>{
-            projectList = data;
-        });
-}
+    for(var i = 0; i < project.socials.length; i++){
+        var _link = document.createElement('a');
+        _link.href = project.socials[i].downloadUrl;
+        _link.target = '_blank';
+        
+        var _img = document.createElement('IMG');
+        _img.setAttribute('class', 'socialIcon');
+        _img.src = "Images/Social/" + project.socials[i].socialName + "_Icon.png";
+        
+        _link.appendChild(_img);
+        
+        _projLinks.appendChild(_link);
+    }
 
-function AssignIconEvent(iconInfo){
-    iconInfo[0].addEventListener("mouseover", function(){
-       iconInfo[0].src = iconInfo[2];
-    });
-    iconInfo[0].addEventListener("mouseout", function(){
-       iconInfo[0].src = iconInfo[1];
-    });
+    return _card;
 }
-
-var mediaIcons = [
-    [
-        document.getElementById("githubIcon"),
-        "Images/SocialIcons/Logo_Github.png",
-        "Images/SocialIcons/Logo_Github_Highlight.png",
-    ],
-    [
-        document.getElementById("linkedinIcon"),
-        "Images/SocialIcons/Logo_LinkedIn.png",
-        "Images/SocialIcons/Logo_LinkedIn_Highlight.png",
-    ],
-    [
-        document.getElementById("itchIcon"),
-        "Images/SocialIcons/Logo_Itch.png",
-        "Images/SocialIcons/Logo_Itch_Highlight.png",
-    ],
-    [
-        document.getElementById("twitterIcon"),
-        "Images/SocialIcons/Logo_Twitter.png",
-        "Images/SocialIcons/Logo_Twitter_Highlight.png",
-    ],
-    [
-        document.getElementById("youtubeIcon"),
-        "Images/SocialIcons/Logo_Youtube.png",
-        "Images/SocialIcons/Logo_Youtube_Highlight.png",
-    ]
-];
