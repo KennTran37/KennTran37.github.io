@@ -79,8 +79,7 @@ body{
 
 .socialIcon{
     width: 2.5rem;
-    min-width: 2.5rem;
-    min-height: 2.5rem;
+    height: 2.5rem;
 }
 
 #projFeatures-Container{
@@ -139,11 +138,6 @@ body{
     gap: 10px;
 }
 
-.projectCard-Links .socialIcon{
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
 #portfolio-Container{
     padding: 0px 1rem;
 
@@ -163,8 +157,6 @@ body{
 }
 
 #experience{
-    width: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,8 +178,7 @@ body{
 
 .Icon {
     width: 4rem;
-    min-width: 4rem;
-    min-height: 4rem;
+    height: 4rem;
     border-radius: 0.3rem;
 }
 
@@ -225,12 +216,50 @@ body{
 }
 
 @media screen and (min-height: 1000px) {
+    #titleBar h1{
+        font-size: 9em;
+        line-height: 9rem;
+    }
+    
+    #titleBar h4{
+        font-size: 1.75rem;
+    }
+    
+    .socialIcon{
+        width: 4rem;
+        height: 4rem;
+    }
+    
     #portfolio-Content{
         height: calc(100vh - 5rem);
+        width: 100%;
+        
         margin-top: 5rem;
         margin-bottom: 0px;
     }
+    
+    .projectCard .Icon{
+        width: 9rem;
+        height: 9rem;
+    }
 
+    .projectCard-Name{
+        font-size: 2rem;
+    }
+    
+    .Icon {
+        width: 7rem;
+        height: 7rem;
+    }
+    
+    #experienceCard-TextFields h3{
+        font-size: 2rem;
+    }
+
+    #experienceCard-TextFields h4{
+        font-size: 1.5rem;
+    }
+    
     .heightAnimation{
         height: 60vh;
         animation-name: landingPageHeight;
