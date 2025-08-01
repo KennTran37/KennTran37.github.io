@@ -1,3 +1,4 @@
+/* === Font Definitions === */
 @font-face {
   font-family: "NeueClarus";
   src: url("fonts/NEUECLARUS-REGULAR.OTF") format("opentype");
@@ -5,42 +6,11 @@
   font-style: normal;
 }
 
+/* === Base Styles === */
 body {
   margin: 0; /* Removes default margin */
   padding: 0; /* Removes default padding */
   overflow: hidden; /* Prevents scrolling */
-}
-
-#paperContainer {
-  width: 50vw; /* 50% of viewport width, adjust as needed */
-  height: calc(100vh - 80px); /* Full viewport height minus header height */
-  margin: 20px auto; /* Centers the container horizontally */
-  display: flex;
-  flex-direction: column;
-  padding: 20px; /* Adds padding inside the container */
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15); /* Soft drop shadow */
-  border-radius: 2px; /* Rounded corners */
-  gap: 10px;
-}
-
-#headerContainer {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  text-align: center; /* Centers the text inside the header */
-  color: white; /* Sets the text color to white */
-  font-size: 1em; /* Increases the font size */
-  min-height: 54px; /* Minimum height for the header */
-  background-color: #483c62;
-  padding: 5px;
-  border-radius: 4px;
-  height: 70px; /* Optional: set a fixed height for better vertical centering */
-}
-
-h2,
-h3,
-button {
-  color: #483c62;
 }
 
 h1,
@@ -51,6 +21,12 @@ h5,
 a,
 button {
   font-family: "Open Sans", OpenSans, Arial, sans-serif;
+}
+
+h2,
+h3,
+button {
+  color: #483c62;
 }
 
 p,
@@ -74,6 +50,34 @@ a {
   font-weight: 600;
 }
 
+/* === Layout Containers === */
+#paperContainer {
+  width: 50vw;
+  height: calc(100vh - 80px);
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Adds padding inside the container */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15); /* Soft drop shadow */
+  border-radius: 2px; /* Rounded corners */
+  gap: 10px;
+}
+
+#headerContainer {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Centers the text inside the header */
+  color: white; /* Sets the text color to white */
+  font-size: 1em; /* Increases the font size */
+  min-height: 54px; /* Minimum height for the header */
+  background-color: #483c62;
+  padding: 5px;
+  border-radius: 4px;
+  height: 70px; /* Optional: set a fixed height for better vertical centering */
+}
+
+/* === Contact Section === */
 #contactContainer {
   display: flex;
   flex-wrap: wrap; /* Allows wrapping to next line */
@@ -90,12 +94,14 @@ a {
   white-space: nowrap; /* Prevents breaking inside each contact item */
 }
 
+/* === Summary Section === */
 #summaryContainer {
   padding: 10px 20px;
   background-color: #f2f0f8;
   border-radius: 4px;
 }
 
+/* === Tab Section === */
 #informationContainer {
   display: flex;
   flex-direction: column;
@@ -117,7 +123,6 @@ a {
   border: none;
   cursor: pointer;
   border-radius: 4px 4px 0 0;
-  transition: background 0.2s;
   font-size: 1em;
   background-color: transparent;
 }
@@ -151,10 +156,7 @@ a {
   padding: 10px;
 }
 
-.expContainer h2 {
-  text-align: center;
-}
-
+/* === Experience Section === */
 .expContainer {
   padding: 10px;
   border: white 1px solid;
@@ -162,6 +164,10 @@ a {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.expContainer h2 {
+  text-align: center;
 }
 
 .expEntry {
@@ -190,6 +196,7 @@ a {
   text-align: right;
 }
 
+/* === List Styles === */
 ul {
   padding-left: 20px;
 }
@@ -203,6 +210,7 @@ ul li {
   margin-bottom: 4px;
 }
 
+/* === Experience Content === */
 .expContent {
   display: flex;
   flex-direction: column;
@@ -218,4 +226,81 @@ ul li {
 
 .expContent li {
   font-size: 0.9em;
+}
+
+/* === Responsive Styles === */
+
+/* For tablets and below */
+@media (max-width: 900px) {
+  #paperContainer {
+    width: 95vw;
+    height: 95vh;
+    margin: auto;
+    gap: 8px;
+  }
+  #headerContainer {
+    font-size: 0.95em;
+    height: 56px;
+    min-height: 40px;
+    padding: 4px;
+  }
+  #summaryContainer,
+  #contactContainer,
+  #tabContentContainer {
+    padding: 8px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+  #paperContainer {
+    width: calc(100vw - 40px);
+    margin: auto;
+  }
+  #headerContainer {
+    font-size: 0.85em;
+    height: 44px;
+    min-height: 32px;
+    padding: 2px;
+  }
+  .tab {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .tablinks {
+    border-radius: 4px;
+    padding: 8px 0;
+    font-size: 0.95em;
+  }
+  #informationContainer {
+    gap: 8px;
+  }
+  #summaryContainer,
+  #contactContainer,
+  #tabContentContainer {
+    font-size: 0.95em;
+  }
+  .expContainer {
+    padding: 6px;
+    gap: 4px;
+  }
+  .expLabel h3 {
+    font-size: 1em;
+    margin-right: 6px;
+  }
+  .expLabel p {
+    font-size: 0.75em;
+  }
+  ul {
+    padding-left: 14px;
+  }
+  ul li {
+    font-size: 0.85em;
+    margin-bottom: 2px;
+  }
+  .expContent h4,
+  .expContent h5 {
+    margin-left: 4px;
+    font-size: 0.85em;
+  }
 }
