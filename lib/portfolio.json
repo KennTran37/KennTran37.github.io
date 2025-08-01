@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Games",
+        "entries": [
+            {
+                "label": "Tetris Flip",
+                "link": "https://www.google.com/",
+                "description": "A simple tetris game but with two mischievous characters messing with the board, flipping it horizontally or vertically.",
+                "points": [
+                    "Just for fun, I wanted to try recreating Tetris"
+                ]
+            },
+            {
+                "label": "Wronged Travel",
+                "link": "https://www.google.com/",
+                "description": "You, a traveller, get yourself involved with a some thugs on the streets tell you to give them your belongings.  After beating 'em up, a hunter comes across and somehow misunderstands the situation.. Thinking that you're the thug trying to take the local's belongings. Things escalate and now the authorities are after you..",
+                "points": [
+                    "In this game I tried exploring how to develop 2D games where the characters can move on both Axis, X and Y",
+                    "Exploring algorithms to handle different enemy AI state behaviours"
+                ]
+            },
+            {
+                "label": "Samurai Cut",
+                "link": "https://www.google.com/",
+                "description": "A Samurai on a journey encountering rivals and obstacles.",
+                "points": [
+                    "A simple endless runner game exploring the style of mixing 2D sprites with the 3D environment"
+                ]
+            },
+            {
+                "label": "Final Test Subject",
+                "link": "https://www.google.com/",
+                "description": "As the final robot creation in the lab, you are tasked to clear and  survive through multiple rooms packed with robots that are also tasked  to destroy you.",
+                "points": [
+                    "A project where I played around with more of Unity’s features",
+                    "In the project, I explored more about Unity’s Job and Burst System to handle A* Pathfinding Algorithm and explored more about Unity’s baked lighting system"
+                ]
+            },
+            {
+                "label": "Riot Shield",
+                "link": "https://www.google.com/",
+                "description": "An endless runner game where you, as a Swat are tasked with destroying  everything that comes in your path except a few things. As you destroy  these objects, you will gain points to beat your own high score and gain coins to upgrade yourself and buy 5 other Swats from around the world.",
+                "points": [
+                    "Project was created for an assessment during university but a friend and I decided to continue updating it after graduating"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Projects",
+        "entries": [
+            {
+                "label": "Custom Youtube Feed",
+                "link": "https://www.google.com/",
+                "description": "Wanted to create custom feed that has more control over what I want to see and how I want to see it.",
+                "points": [
+                    "Created mock-ups of the feed in Figma",
+                    "Used Flutter to implement the feed",
+                    "Using Python as the backend to scrape the data from YouTube and receiving push notifications when new videos are uploaded via Youtube's PubSub API",
+                    "Using Supabase as the database to store the data"
+                ]
+            }
+        ]
+    }
+]

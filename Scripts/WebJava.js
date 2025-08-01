@@ -1,73 +1,175 @@
-window.onload = function(){
-    var x = window.matchMedia("screen and (min-height: 1000px)");
-    if(x.matches){
-        window.addEventListener('scroll', Scroll_EventListener);
-    }
+function changeTab(pageName, elmnt) {
+    console.log("Changing to tab: " + pageName);
 
-    fetch("./Scripts/ProjectList.json").then(resp => {
-        return resp.json()
-    }).then(json => {
-        const _featureProjectsHolder = document.getElementById("projFeatures");
-        _featureProjectsHolder.append(CreateProjectCard(json[1]));
-        _featureProjectsHolder.append(CreateProjectCard(json[4]));
-        _featureProjectsHolder.append(CreateProjectCard(json[2]));
-        
-        const _projectsHolder = document.getElementById("projects");
-        
-        for(var i = 0; i < json.length; i++){
-            _projectsHolder.append(CreateProjectCard(json[i]));
-        }
+    // Hide all tab content
+    const tabContents = document.querySelectorAll('.tabContent');
+    tabContents.forEach(tab => {
+        tab.style.display = "none";
     });
-}
 
-function Scroll_EventListener(e){
-    if(window.pageYOffset > 150){
-        document.getElementById("landingPage").classList.add("heightAnimation");
-        window.removeEventListener('scroll', Scroll_EventListener);
+    // Remove active class from all tab buttons
+    const tabLinks = document.querySelectorAll('.tablinks');
+    tabLinks.forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    // Show the selected tab content
+    const selectedTab = document.getElementById(pageName + "Container");
+    if (selectedTab) {
+        selectedTab.style.display = "flex";
+    }
+
+    // Add active class to the clicked button
+    if (elmnt) {
+        elmnt.classList.add("active");
     }
 }
 
-function CreateProjectCard(project){
-    var _card = document.createElement('div');
-    _card.setAttribute('class', 'projectCard');
-    
-    var _icon = document.createElement('IMG');
-    _icon.setAttribute('class', 'Icon');
-    _icon.src = project.projectIcon;
-    _card.appendChild(_icon);
+window.onload = function () {
+    // Resume
+    fetch('lib/resume.json')
+        .then(response => response.json())
+        .then(data => {
+            const resumeContainer = document.getElementById('resumeContainer');
+            resumeContainer.innerHTML = '';
+            data.forEach(section => {
+                const expElem = createExpContainer(section);
+                resumeContainer.appendChild(expElem);
+            });
+        });
 
-    var _projInfo = document.createElement('div');
-    _projInfo.setAttribute('class', 'projectCard-Info');
-    _card.appendChild(_projInfo);
+    // Portfolio
+    fetch('lib/portfolio.json')
+        .then(response => response.json())
+        .then(data => {
+            const portfolioContainer = document.getElementById('portfolioContainer');
+            portfolioContainer.innerHTML = '';
+            data.forEach(section => {
+                const expElem = createPortfolioContainer(section);
+                portfolioContainer.appendChild(expElem);
+            });
+        });
+};
 
-    var _projName = document.createElement('h3');
-    _projName.setAttribute('class', 'projectCard-Name');
-    _projName.innerText = project.projectName;
-    _projInfo.appendChild(_projName);
-    
-    var _gap = document.createElement('hr');
-    _gap.setAttribute('size', '2px');
-    _gap.setAttribute('width', '70%');
-    _gap.setAttribute('color', 'white');
-    _projInfo.appendChild(_gap);
-    
-    var _projLinks = document.createElement('div');
-    _projLinks.setAttribute('class', 'projectCard-Links');
-    _projInfo.appendChild(_projLinks);
+function createExpContainer(jsonString) {
+    const data = typeof jsonString === "string" ? JSON.parse(jsonString) : jsonString;
+    const container = document.createElement('div');
+    container.className = 'expContainer';
 
-    for(var i = 0; i < project.socials.length; i++){
-        var _link = document.createElement('a');
-        _link.href = project.socials[i].downloadUrl;
-        _link.target = '_blank';
-        
-        var _img = document.createElement('IMG');
-        _img.setAttribute('class', 'socialIcon');
-        _img.src = "Images/Social/" + project.socials[i].socialName + "_Icon.png";
-        
-        _link.appendChild(_img);
-        
-        _projLinks.appendChild(_link);
+    // Title
+    if (data.title) {
+        const h2 = document.createElement('h2');
+        h2.textContent = data.title;
+        container.appendChild(h2);
     }
 
-    return _card;
+    // Entries
+    data.entries.forEach(entry => {
+        const expEntry = document.createElement('div');
+        expEntry.className = 'expEntry';
+
+        // Label Row
+        const expLabel = document.createElement('div');
+        expLabel.className = 'expLabel';
+
+        const h3 = document.createElement('h3');
+        h3.textContent = entry.label;
+        expLabel.appendChild(h3);
+
+        const p = document.createElement('p');
+        p.textContent = entry.date;
+        expLabel.appendChild(p);
+
+        expEntry.appendChild(expLabel);
+
+        // Roles
+        entry.roles.forEach(roleObj => {
+            const expContent = document.createElement('div');
+            expContent.className = 'expContent';
+
+            const h4 = document.createElement('h4');
+            h4.textContent = roleObj.role;
+            expContent.appendChild(h4);
+
+            const ul = document.createElement('ul');
+            roleObj.points.forEach(point => {
+                const li = document.createElement('li');
+                li.textContent = point;
+                ul.appendChild(li);
+            });
+            expContent.appendChild(ul);
+
+            expEntry.appendChild(expContent);
+        });
+
+        container.appendChild(expEntry);
+    });
+
+    return container;
 }
+
+function createPortfolioContainer(section) {
+    const container = document.createElement('div');
+    container.className = 'expContainer';
+
+    // Title
+    if (section.title) {
+        const h2 = document.createElement('h2');
+        h2.textContent = section.title;
+        container.appendChild(h2);
+    }
+
+    // Entries
+    section.entries.forEach(entry => {
+        const expEntry = document.createElement('div');
+        expEntry.className = 'expEntry';
+
+        // Label Row
+        const expLabel = document.createElement('div');
+        expLabel.className = 'expLabel';
+
+        const h3 = document.createElement('h3');
+        h3.textContent = entry.label;
+        expLabel.appendChild(h3);
+
+        // Hyperlink as "Link"
+        if (entry.link) {
+            const link = document.createElement('a');
+            link.href = entry.link;
+            link.textContent = 'Link';
+            link.target = '_blank';
+            expLabel.appendChild(link);
+        }
+
+        expEntry.appendChild(expLabel);
+
+        // Content
+        const expContent = document.createElement('div');
+        expContent.className = 'expContent';
+
+        if (entry.description) {
+            const h5 = document.createElement('h5');
+            h5.textContent = entry.description;
+            expContent.appendChild(h5);
+        }
+
+        // Points (optional)
+        if (entry.points && Array.isArray(entry.points)) {
+            const ul = document.createElement('ul');
+            entry.points.forEach(point => {
+                const li = document.createElement('li');
+                li.textContent = point;
+                ul.appendChild(li);
+            });
+            expContent.appendChild(ul);
+        }
+
+        expEntry.appendChild(expContent);
+        container.appendChild(expEntry);
+    });
+
+    return container;
+}
+
+resumeTab = document.getElementById("resumeContainer");
+changeTab('resume', resumeTab);

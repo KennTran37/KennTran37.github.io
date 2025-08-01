@@ -1,0 +1,63 @@
+[
+    {
+        "title": "Professional Experiences",
+        "entries": [
+            {
+                "label": "Freelance Robotics",
+                "date": "2020 - Present",
+                "roles": [
+                    {
+                        "role": "Software Engineer",
+                        "points": [
+                            "Designed and prototyped intuitive UIs in Figma, then implemented them in both WPF and Flutter for a seamless user experience",
+                            "Developed and maintained cross‑platform applications on Windows desktop and Android, ensuring consistent functionality and performance",
+                            "Built custom C++ algorithms for robotic path planning—segmenting trajectories, path interpellation, and dynamically modifying waypoints",
+                            "Integrated RoboDK simulations for Robots directly into the desktop application to validate motion plans",
+                            "Captured and processed Zivid 3D point‑cloud data, using HALCON image‑processing code to align scans with CAD models and automatically place robot paths",
+                            "Created native Android plugins (Java) for SMB network‑share access and implemented GPS NTRIP/NMEA receivers for real‑time location streaming"
+                        ]
+                    },
+                    {
+                        "role": "Internship",
+                        "points": [
+                            "Developed an AR application in Unity to simulate modelled system integrations for industrial companies"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Education",
+        "entries": [
+            {
+                "label": "Bachelor of Games and Interactive Design",
+                "date": "2018 - 2020",
+                "roles": [
+                    {
+                        "role": "University of Canberra",
+                        "points": [
+                            "Developed games for different platforms in different group assignments and publication to stores",
+                            "Advanced game design and development theories",
+                            "Won a 24hr game design challenge for best overall complete game state"
+                        ]
+                    }
+                ]
+            },
+            {
+                "label": "Diploma of Digital and Interactive Games",
+                "date": "2017 - 2028",
+                "roles": [
+                    {
+                        "role": "Tafe Brisbane",
+                        "points": [
+                            "Introduction to developing games through the use of Unity",
+                            "Designed 3D assets through Autodesk 3ds Max and Autodesk Maya",
+                            "Introduction to agile project management and software design documentation (GDD and TDD)"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,85 +1,102 @@
 <!DOCTYPE html>
-<html lang="eu"> <meta charset="utf-8">
-<title>Kenny Tran - Portfolio</title>
-    <link rel="stylesheet" href="WebStyle.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <body>
-        <div id="landingPage">
-            <div id="landingContent-Container">
-                <div id="landingContent">
-                    <div id="titleBar">
-                        <h1>Kenny Tran</h1>
-                        <h4>@Kenn_Tran_37</h4>
-                        <h4>kenn_tran_37@hotmail.com</h4>
-                    </div>
-                    <div id="socialBar-Container">
-                        <div id="socialBar">
-                            <a href="https://github.com/KennTran37/" target="_blank">
-                                <img class="socialIcon" src="Images/Social/Github_Icon.png">
-                            </a>
-                            <a href="https://www.linkedin.com/in/kenntran37/" target="_blank">
-                                <img class="socialIcon" src="Images/Social/LinkedIn_Icon.png">
-                            </a>
-                            <a href="https://kenn-tran-37.itch.io/" target="_blank">
-                                <img class="socialIcon" src="Images/Social/ItchIO_Icon.png">
-                            </a>
-                            <a href="https://twitter.com/Kenn_Tran_37/" target="_blank">
-                                <img class="socialIcon" src="Images/Social/Twitter_Icon.png">
-                            </a>
-                             <a href="https://www.youtube.com/channel/UCDrWh7YwN5wZklw5cZ4TZ5w/" target="_blank">
-                                <img class="socialIcon" src="Images/Social/Youtube_Icon.png">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div id="projFeatures-Container">
-                    <div id="projFeatures">
-                    </div>
-                </div>
-            </div>
+<html lang="eu">
+  <meta charset="utf-8" />
+  <title>Kenny Tran - Portfolio</title>
+  <link rel="stylesheet" href="WebStyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <div id="paperContainer">
+      <div id="headerContainer">
+        <h1>Kenny Tran</h1>
+      </div>
+      <div id="contactContainer" class="contentBox">
+        <p>kenn_tran_37@hotmail.com</p>
+        <p>linkedin.com/in/kenntran37</p>
+        <p>kenn-tran-37.itch.io</p>
+      </div>
+      <div id="summaryContainer">
+        <p>
+          I’m a Software Engineer who designs clean UIs and builds smart
+          algorithms, whether it’s a real‑world desktop/mobile app or a fun,
+          interactive game. I’ve worked on robotics solutions and handled
+          everything from Figma mock‑ups through backend logic. I love applying
+          my skills to new challenges and constantly learning along the way.
+        </p>
+      </div>
+      <div id="informationContainer">
+        <div class="tab">
+          <button class="tablinks" onclick="changeTab('resume', this)">
+            Resume
+          </button>
+          <button class="tablinks" onclick="changeTab('portfolio', this)">
+            Portfolio
+          </button>
+          <button class="tablinks" onclick="changeTab('skills', this)">
+            Skills & Others
+          </button>
         </div>
-        <div id="portfolio-Container">
-            <div id="portfolio-Content">
-                <div id="experience">
-                    <div id="experienceCard">
-                        <img class="Icon" src="Images/Tafe_Icon.png">
-                        <div id="experienceCard-TextFields">
-                            <h3>Diploma of Digital and Interactive Games</h3>
-                            <h4>Tafe Queensland | 2017 - 2018</h4>
-                        </div>
-                    </div>
-                    <div id="experienceCard">
-                        <img class="Icon" src="Images/UC_Icon.png">
-                        <div id="experienceCard-TextFields">
-                            <h3>Bachelor of Games and Interactive Design</h3>
-                            <h4>University of Canberra | 2018 - 2020</h4>
-                        </div>
-                    </div>
-                    <br>
-                    <div id="experienceCard">
-                        <img class="Icon" src="Images/FR_Icon.png">
-                        <div id="experienceCard-TextFields">
-                            <h3>Internship Trainee</h3>
-                            <h4>Freelance Robotics | 2020 - 2022</h4>
-                        </div>
-                    </div>
-                    <div id="experienceCard">
-                        <img class="Icon" src="Images/FR_Icon.png">
-                        <div id="experienceCard-TextFields">
-                            <h3>Software Engineer</h3>
-                            <h4>Freelance Robotics | 2022 - Present</h4>
-                        </div>
-                    </div>
+        <div id="tabContents">
+          <div id="resumeContainer" class="tabContent contentBox"></div>
+          <div id="portfolioContainer" class="tabContent contentBox">
+            <div class="expContainer">
+              <h2>Games</h2>
+              <div class="expEntry">
+                <div class="expLabel">
+                  <h3>Tetris Flip</h3>
+                  <p>Link</p>
                 </div>
-                <div id="projects">
+                <div class="expContent">
+                  <h5>
+                    A simple tetris game but with two mischievous characters
+                    messing with the board, flipping it horizontally or
+                    vertically.
+                  </h5>
+                  <ul>
+                    <li>Just for fun, I wanted to try recreating Tetris</li>
+                  </ul>
                 </div>
+              </div>
+
+              <div class="expEntry">
+                <div class="expLabel">
+                  <h3>Wronged Travel</h3>
+                  <p>Link</p>
+                </div>
+                <div class="expContent">
+                  <h5>
+                    You, a traveller, get yourself involved with a some thugs on
+                    the streets tell you to give them your belongings.  After
+                    beating 'em up, a hunter comes across and somehow
+                    misunderstands the situation.. Thinking that you're the thug
+                    trying to take the local's belongings. Things escalate and
+                    now the authorities are after you..
+                  </h5>
+                  <ul>
+                    <li>
+                      In this game I tried exploring how to develop 2D games
+                      where the characters can move on both Axis, X and Y
+                    </li>
+                    <li>
+                      Exploring algorithms to handle different enemy AI state
+                      behaviours
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
+          <div id="skillsContainer" class="tabContent contentBox">Skills</div>
         </div>
-    </body>
-    <footer>
-        <script src="Scripts/WebJava.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    </footer>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <script src="Scripts/WebJava.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </footer>
 </html>
