@@ -30,6 +30,21 @@ function changeTab(pageName) {
         tab.classList.add("selectedTab");
         tab.classList.add("active");
     }
+
+    tabContentContainer = document.getElementById("tabContentContainer");
+    if (tabContentContainer) {
+        switch (pageName) {
+            case 'resume':
+                tabContentContainer.style.borderRadius = "0 4px 4px 4px";
+                break;
+            case 'portfolio':
+                tabContentContainer.style.borderRadius = "4px";
+                break;
+            case 'skills':
+                tabContentContainer.style.borderRadius = "4px 0 4px 4px";
+                break;
+        }
+    }
 }
 
 window.onload = function () {
