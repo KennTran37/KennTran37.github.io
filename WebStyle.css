@@ -8,9 +8,9 @@
 
 /* === Base Styles === */
 body {
-  margin: 0; /* Removes default margin */
-  padding: 0; /* Removes default padding */
-  overflow: hidden; /* Prevents scrolling */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 h1,
@@ -242,7 +242,6 @@ ul li {
     font-size: 0.95em;
     height: 56px;
     min-height: 40px;
-    padding: 4px;
   }
   #summaryContainer,
   #contactContainer,
@@ -253,15 +252,19 @@ ul li {
 
 /* For mobile devices */
 @media (max-width: 600px) {
+  body {
+    overflow: auto;
+  }
   #paperContainer {
     width: calc(100vw - 40px);
+    height: auto;
+    overflow-y: scroll;
     margin: auto;
   }
   #headerContainer {
     font-size: 0.85em;
     height: 44px;
     min-height: 32px;
-    padding: 2px;
   }
   .tab {
     flex-direction: column;
