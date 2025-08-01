@@ -41,12 +41,12 @@ h4,
 h5,
 p,
 ul {
-  margin: 0; /* Removes default margin from the h1 element */
+  margin: 0;
 }
 
 a {
-  text-decoration: none; /* Removes underline from links */
-  color: #483c62; /* Sets link color */
+  text-decoration: none;
+  color: #483c62;
   font-weight: 600;
 }
 
@@ -57,41 +57,44 @@ a {
   margin: 20px auto;
   display: flex;
   flex-direction: column;
-  padding: 20px; /* Adds padding inside the container */
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15); /* Soft drop shadow */
-  border-radius: 2px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
   gap: 10px;
 }
 
 #headerContainer {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  text-align: center; /* Centers the text inside the header */
-  color: white; /* Sets the text color to white */
-  font-size: 1em; /* Increases the font size */
-  min-height: 54px; /* Minimum height for the header */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 1em;
+  min-height: 54px;
   background-color: #483c62;
   padding: 5px;
   border-radius: 4px;
-  height: 70px; /* Optional: set a fixed height for better vertical centering */
+  height: 70px;
 }
 
 /* === Contact Section === */
 #contactContainer {
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping to next line */
-  gap: 10px; /* Space between items */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   padding: 8px;
   background-color: #f2f0f8;
 }
 
-#contactContainer p {
-  margin: 0;
-  white-space: nowrap; /* Prevents breaking inside each contact item */
+#contactContainer p,
+#contactContainer a {
+  font-family: "NeueClarus", Arial, sans-serif;
+  color: black;
+  font-weight: 100;
+  white-space: nowrap;
 }
 
 /* === Summary Section === */
@@ -105,7 +108,6 @@ a {
 #informationContainer {
   display: flex;
   flex-direction: column;
-
   height: 100%;
   max-height: 100%;
   overflow: auto;
@@ -123,7 +125,6 @@ a {
   border: none;
   cursor: pointer;
   border-radius: 4px 4px 0 0;
-  font-size: 1em;
   background-color: transparent;
 }
 
@@ -135,11 +136,6 @@ a {
   background: #f2f0f8;
   font-size: 1.1em;
   font-weight: 600;
-}
-
-.tablinks:hover {
-  background: #f2f0f840;
-  border-radius: 4px 4px 0 0;
 }
 
 .tabContent {
@@ -179,13 +175,13 @@ a {
 .expLabel {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Vertically center the items */
+  align-items: center;
 }
 
 .expLabel h3 {
-  flex: 1; /* Fills available space */
-  text-align: left; /* Align text to the left */
-  margin-right: 10px; /* Optional: space between h3 and p */
+  flex: 1;
+  text-align: left;
+  margin-right: 10px;
 }
 
 .expLabel p {
@@ -202,7 +198,7 @@ ul {
 }
 
 ul li::marker {
-  font-size: 0.5em; /* Adjust as needed */
+  font-size: 0.5em;
 }
 
 ul li {
@@ -210,7 +206,6 @@ ul li {
   margin-bottom: 4px;
 }
 
-/* === Experience Content === */
 .expContent {
   display: flex;
   flex-direction: column;
@@ -230,11 +225,10 @@ ul li {
 
 /* === Responsive Styles === */
 
-/* For tablets and below */
+/* Tablets and below */
 @media (max-width: 900px) {
   #paperContainer {
     width: 95vw;
-    height: 95vh;
     margin: auto;
     gap: 8px;
   }
@@ -243,14 +237,9 @@ ul li {
     height: 56px;
     min-height: 40px;
   }
-  #summaryContainer,
-  #contactContainer,
-  #tabContentContainer {
-    padding: 8px;
-  }
 }
 
-/* For mobile devices */
+/* Mobile devices */
 @media (max-width: 600px) {
   body {
     overflow: auto;
@@ -258,7 +247,6 @@ ul li {
   #paperContainer {
     width: calc(100vw - 40px);
     height: auto;
-    overflow-y: scroll;
     margin: auto;
   }
   #headerContainer {
@@ -268,11 +256,9 @@ ul li {
   }
   .tab {
     flex-direction: column;
-    gap: 6px;
   }
   .tablinks {
     border-radius: 4px;
-    padding: 8px 0;
     font-size: 0.95em;
   }
   #informationContainer {
@@ -283,9 +269,8 @@ ul li {
   #tabContentContainer {
     font-size: 0.95em;
   }
-  .expContainer {
-    padding: 6px;
-    gap: 4px;
+  #tabContentContainer {
+    border-radius: 4px;
   }
   .expLabel h3 {
     font-size: 1em;
@@ -305,5 +290,25 @@ ul li {
   .expContent h5 {
     margin-left: 4px;
     font-size: 0.85em;
+  }
+}
+
+/* Short screens */
+@media (max-height: 760px) {
+  body {
+    overflow: auto;
+  }
+  #paperContainer {
+    height: auto;
+    margin: auto;
+  }
+}
+
+/* Tablets landscape and short screens */
+@media (max-height: 760px) and (min-width: 600px) {
+  #paperContainer {
+    height: auto;
+    margin: auto;
+    width: 90vw;
   }
 }

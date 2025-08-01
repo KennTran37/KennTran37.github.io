@@ -33,16 +33,21 @@ function changeTab(pageName) {
 
     tabContentContainer = document.getElementById("tabContentContainer");
     if (tabContentContainer) {
-        switch (pageName) {
-            case 'resume':
-                tabContentContainer.style.borderRadius = "0 4px 4px 4px";
-                break;
-            case 'portfolio':
-                tabContentContainer.style.borderRadius = "4px";
-                break;
-            case 'skills':
-                tabContentContainer.style.borderRadius = "4px 0 4px 4px";
-                break;
+        const isWideScreen = window.innerWidth > 600;
+        if (isWideScreen) {
+            switch (pageName) {
+                case 'resume':
+                    tabContentContainer.style.borderRadius = "0 4px 4px 4px";
+                    break;
+                case 'portfolio':
+                    tabContentContainer.style.borderRadius = "4px";
+                    break;
+                case 'skills':
+                    tabContentContainer.style.borderRadius = "4px 0 4px 4px";
+                    break;
+            }
+        } else {
+            tabContentContainer.style.borderRadius = "4px";
         }
     }
 }
