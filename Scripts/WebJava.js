@@ -1,5 +1,11 @@
-function changeTab(pageName, elmnt) {
-    console.log("Changing to tab: " + pageName);
+function changeTab(pageName) {
+    const tab = document.getElementById(pageName + "Tab");
+
+    // Deselect all tabs
+    const tabButtons = document.querySelectorAll('.tablinks');
+    tabButtons.forEach(tab => {
+        tab.classList.remove("selectedTab");
+    });
 
     // Hide all tab content
     const tabContents = document.querySelectorAll('.tabContent');
@@ -20,8 +26,9 @@ function changeTab(pageName, elmnt) {
     }
 
     // Add active class to the clicked button
-    if (elmnt) {
-        elmnt.classList.add("active");
+    if (tab) {
+        tab.classList.add("selectedTab");
+        tab.classList.add("active");
     }
 }
 

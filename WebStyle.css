@@ -71,14 +71,26 @@ ul {
   flex: 1;
   padding: 10px 0;
   font-size: 1em;
-  background: #f2f0f8;
   border: none;
   cursor: pointer;
+  border-radius: 4px 4px 0 0;
   transition: background 0.2s;
+  font-size: 1em;
+  background-color: transparent;
+}
+
+.deselectedTab {
+  background: none;
+}
+
+.selectedTab {
+  background: #f2f0f8;
+  font-size: 1.1em;
+  font-weight: 400;
 }
 
 .tablinks:hover {
-  background: #e0dff5;
+  background: #f2f0f840;
   border-radius: 4px 4px 0 0;
 }
 
@@ -133,15 +145,20 @@ ul {
   text-align: right;
 }
 
-.expEntry ul {
+ul {
   padding-left: 20px;
 }
 
-.expEntry ul li::marker {
-  font-size: 0.6em; /* Adjust as needed */
+ul li::marker {
+  font-size: 0.5em; /* Adjust as needed */
 }
 
-.expEntry ul li {
-  text-indent: 10px;
+ul li {
+  padding-left: 8px;
   margin-bottom: 4px;
+}
+
+.expContent h4,
+.expContent h5 {
+  margin-left: 10px;
 }
