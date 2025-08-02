@@ -92,8 +92,8 @@ a {
 #contactContainer p,
 #contactContainer a {
   font-family: "NeueClarus", Arial, sans-serif;
+  font-weight: normal;
   color: black;
-  font-weight: 100;
   white-space: nowrap;
 }
 
@@ -188,7 +188,6 @@ a {
   margin: 0;
   font-family: "Open Sans", OpenSans, Arial, sans-serif;
   font-size: 0.8em;
-  font-weight: 600;
   text-align: right;
 }
 
