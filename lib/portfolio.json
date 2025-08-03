@@ -7,7 +7,7 @@
                 "link": "https://kenn-tran-37.itch.io/tetris-flip",
                 "description": "A simple tetris game but with two mischievous characters messing with the board, flipping it horizontally or vertically.",
                 "points": [
-                    "Just for fun, I wanted to try recreating Tetris"
+                    "Just for fun, I wanted to try recreating Tetris but with an added mechanism"
                 ]
             },
             {
@@ -37,11 +37,52 @@
                 ]
             },
             {
+                "label": "Skull Temple",
+                "link": "https://turbo-interactive.itch.io/skull-temple",
+                "description": "A simple endless runner where you take on the rule of a skull boy running through the temple dodging dangerous obstacles whilst bashing robots that have entered the temple.",
+                "points": [
+                    "After graduating, a friend and I decided to make a game together",
+                    "Since this game is an endless side-scrolling runner, I was able to learn more about how to handle generating obstacles and enemies in a procedural manner"
+                ]
+            },
+            {
                 "label": "Riot Shield",
                 "link": "https://kenn-tran-37.itch.io/riot-shield",
-                "description": "An endless runner game where you, as a Swat are tasked with destroying  everything that comes in your path except a few things. As you destroy  these objects, you will gain points to beat your own high score and gain coins to upgrade yourself and buy 5 other Swats from around the world.",
+                "description": "An endless runner game where you, as a Swat are tasked with destroying everything that comes in your path except a few things. As you destroy these objects, you will gain points to beat your own high score and gain coins to upgrade yourself and buy 5 other Swats from around the world.",
                 "points": [
-                    "Project was created for an assessment during university but a friend and I decided to continue updating it after graduating"
+                    "Project was created for an assessment during university but a friend and I decided to properly completing it"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "University Games",
+        "entries": [
+            {
+                "label": "Experimental Games",
+                "link": "https://experimentalgamedesign.itch.io/kenny-tran-experimental-games",
+                "description": "Experimenting with 4 different themes; Seasons, Space, Racing, and Embodied Interaction or Tangile Media.",
+                "points": [
+                    "Seasons - The game had to encompass the theme of seasons. However, because we had to develop it in a software I wasn't familiar with, I was unable to contribute much to the project",
+                    "Space - The game was based on the Player defending the space station from falling asteroids. By deflecting the asteroids when it gets near the shield",
+                    "Racing - I made the game based on racing against time. Where the Player controls a plane around the map to reach checkpoints before the time runs out",
+                    "Embodied Interaction or Tangile Media - I went to Embodied Interaction where the game is a rythem game where the Player has to clap their hands or make a sound to tap the note"
+                ]
+            },
+            {
+                "label": "VR Experience",
+                "link": "https://virtualenvironments.itch.io/kenny-tran-vr-expereince",
+                "description": "Recreated an old military base in Brisbane into a fantasy setting for VR.",
+                "points": [
+                    "Experienced development in VR using Unreal Engine 4's VR Blueprints"
+                ]
+            },
+            {
+                "label": "Spooky Factory",
+                "link": "https://studiokaboom.itch.io/spooky-factory",
+                "description": "After inheriting a deceased relatives’ factory, you discover it is haunted! Spirits are possessing the machinery and are not happy with your presence in the factory. Escape if you can!\n\nSpooky Factory is a first-person survival horror game. With no weapon or armor to defend yourself from the factory’s malicious intentions, you must evade and deactivate traps and animated machinery to get out alive.",
+                "points": [
+                    "As the programmer for the team, I was responsible for implementing the game mechanics and AI behaviours"
                 ]
             }
         ]
