@@ -9,12 +9,14 @@
                     {
                         "role": "Software Engineer",
                         "points": [
-                            "Designed and prototyped intuitive UIs in Figma, then implemented them in both WPF and Flutter for a seamless user experience",
-                            "Developed and maintained cross‑platform applications on Windows desktop and Android, ensuring consistent functionality and performance",
-                            "Built custom C++ algorithms for robotic path planning—segmenting trajectories, path interpellation, and dynamically modifying waypoints",
-                            "Integrated RoboDK simulations for Robots directly into the desktop application to validate motion plans",
-                            "Captured and processed Zivid 3D point‑cloud data, using HALCON image‑processing code to align scans with CAD models and automatically place robot paths",
-                            "Created native Android plugins (Java) for SMB network‑share access and implemented GPS NTRIP/NMEA receivers for real‑time location streaming"
+                            "Designed high-fidelity mockups and interactive wireframes in Figma and implemented the designs in WPF to deliver polished, production Windows desktop UX",
+                            "Implemented data access via ServiceStack, using a mix of ORM and raw SQL queries to meet performance and querying needs for local databases",
+                            "Integrated RoboDK simulations directly into the desktop application to validate and visualize robot motion plans",
+                            "Developed custom path-planning algorithms (trajectory segmentation, path interpolation, dynamic waypoint modification) for robotic motion control and optimization",
+                            "Captured and processed Zivid 3D point-cloud data and used HALCON image-processing routines to align scans with CAD models and automatically generate robot paths",
+                            "Built cross-platform mobile applications in Flutter, translating Figma designs into production UI and integrating RESTful APIs for server communication",
+                            "Developed native Android plugins (Java) for SMB network-share access and implemented GPS NTRIP/NMEA receivers for real-time location streaming",
+                            "Maintained cross-platform consistency and performance across Windows desktop and Android, ensuring feature parity and reliable runtime behaviour"
                         ]
                     },
                     {
