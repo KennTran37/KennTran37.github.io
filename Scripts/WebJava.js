@@ -118,13 +118,15 @@ function createExpContainer(jsonString) {
             h4.textContent = roleObj.role;
             expContent.appendChild(h4);
 
-            const ul = document.createElement('ul');
-            roleObj.points.forEach(point => {
-                const li = document.createElement('li');
-                li.textContent = point;
-                ul.appendChild(li);
-            });
-            expContent.appendChild(ul);
+            if (roleObj.points && Array.isArray(roleObj.points)) {
+                const ul = document.createElement('ul');
+                roleObj.points.forEach(point => {
+                    const li = document.createElement('li');
+                    li.textContent = point;
+                    ul.appendChild(li);
+                });
+                expContent.appendChild(ul);
+            }
 
             expEntry.appendChild(expContent);
         });
