@@ -119,13 +119,29 @@ function createExpContainer(jsonString) {
             expContent.appendChild(h4);
 
             if (roleObj.points && Array.isArray(roleObj.points)) {
-                const ul = document.createElement('ul');
+
                 roleObj.points.forEach(point => {
-                    const li = document.createElement('li');
-                    li.textContent = point;
-                    ul.appendChild(li);
+                    const pointsContainer = document.createElement('div');
+
+                    if (point.title !== "") {
+                        const pointTitle = document.createElement('h4');
+                        pointTitle.textContent = point.title;
+                        pointsContainer.appendChild(pointTitle);
+                    }
+
+                    if (point.descriptions && Array.isArray(point.descriptions)) {
+                        point.descriptions.forEach(description => {
+                            const ul = document.createElement('ul');
+
+                            const li = document.createElement('li');
+                            li.textContent = description;
+                            ul.appendChild(li);
+                            pointsContainer.appendChild(ul);
+                        });
+                    }
+
+                    expContent.appendChild(pointsContainer);
                 });
-                expContent.appendChild(ul);
             }
 
             expEntry.appendChild(expContent);
