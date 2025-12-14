@@ -8,39 +8,7 @@
                 "roles": [
                     {
                         "role": "Software Engineer",
-                        "points": [
-                            {
-                                "title": "Re-designing legacy application while maintaining features:",
-                                "descriptions": [
-                                    "Redesigned the company’s legacy application UI, leading client and peer workshops to clarify requirements and user intent. Created new wireframes, mock-ups, and custom icons in Figma, delivering a modern, icon-focused interface that improved usability for non-technical users and reduced future rework through scalable, consistent design."
-                                ]
-                            },
-                            {
-                                "title": "Transformed high-fidelity mock-ups and wireframe into cross-platform applications:",
-                                "descriptions": [
-                                    "Transformed high-fidelity Figma mock-ups into a functional cross-platform application, demonstrating usability concepts for stakeholders and improving design validation. Led the end-to-end process from wireframing and prototyping in Figma to developing an interactive Flutter application, enabling real-world testing and feedback across desktop and mobile platforms"
-                                ]
-                            },
-                            {
-                                "title": "Designing and providing advice amongst cross-discipline peers:",
-                                "descriptions": [
-                                    "Supported cross-disciplinary teams through knowledge transfer sessions and collaborative workshops. Guided peers in software design, logic planning, and documentation practices, improving team proficiency and enabling smoother integration between software and automation systems."
-                                ]
-                            },
-                            {
-                                "title": "Developing algorithms with speed, scalability, and maintainability:",
-                                "descriptions": [
-                                    "Redesigned a robotic path-generation algorithm to resolve orientation and scalability issues in a client’s automation application. Led planning and documentation, developed a new system prototype in Unity for real-time validation, and delivered a robust, scalable solution that improved accuracy and ensured smooth robotic-arm path transitions.",
-                                    "Adapted RRT-Connect algorithm for robotic-arm path-planning around obstacles in potential tight spaces and optimizing and simplifying path whilst avoiding collision."
-                                ]
-                            },
-                            {
-                                "title": "Performance optimization and RESTful APIs:",
-                                "descriptions": [
-                                    "Optimised database performance and implemented RESTful APIs to improve data flow and responsiveness. Re-architected MySQL queries for bulk retrieval and added targeted indexing, reducing load times from over 30 seconds to under half a second and significantly enhancing user experience and scalability."
-                                ]
-                            }
-                        ]
+                        "points": []
                     }
                 ]
             }
@@ -55,16 +23,7 @@
                 "roles": [
                     {
                         "role": "University of Canberra",
-                        "points": [
-                            {
-                                "title": "",
-                                "descriptions": [
-                                    "Developed games for different platforms in different group assignments and publication to stores",
-                                    "Advanced game design and development theories",
-                                    "Won a 24hr game design challenge for best overall complete game state"
-                                ]
-                            }
-                        ]
+                        "points": []
                     }
                 ]
             },
@@ -74,16 +33,7 @@
                 "roles": [
                     {
                         "role": "Tafe Brisbane",
-                        "points": [
-                            {
-                                "title": "",
-                                "descriptions": [
-                                    "Introduction to developing games through the use of Unity",
-                                    "Designed 3D assets through Autodesk 3ds Max and Autodesk Maya",
-                                    "Introduction to agile project management and software design documentation (GDD and TDD)"
-                                ]
-                            }
-                        ]
+                        "points": []
                     }
                 ]
             }
